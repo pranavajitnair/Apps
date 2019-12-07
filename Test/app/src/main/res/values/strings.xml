@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="button">Enter the name of the locality whose weather is of interest to you and click here</string>
+</resources>
