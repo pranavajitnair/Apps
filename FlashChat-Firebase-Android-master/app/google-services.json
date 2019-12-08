@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "359175979645",
+    "firebase_url": "https://first-a40c5.firebaseio.com",
+    "project_id": "first-a40c5",
+    "storage_bucket": "first-a40c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359175979645:android:7dd6b64788085aaf36a714",
+        "android_client_info": {
+          "package_name": "com.pranavajitnair.flashchatnewfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359175979645-h9fb0mfe8fsceujsagsbmdc1hidaspvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHSsopDXno1RyL2wI7oOo9EJUSvl73l6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359175979645-h9fb0mfe8fsceujsagsbmdc1hidaspvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
