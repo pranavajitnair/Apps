@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoey_flutter/models/task_data.dart';
+import 'package:todoey_flutter/screens/add_task_screen.dart';
+import 'package:todoey_flutter/widgets/task_list.dart';
 
 class TaskScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          showModalBottomSheet(context: context, builder: (context)=>AddTaskScreen());
+        },
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(
           Icons.add  ,
@@ -17,6 +25,7 @@ class TaskScreen extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(top: 60.0,left: 30.0,right: 30.0,bottom: 30.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 CircleAvatar(
                   child: Icon(
@@ -39,7 +48,7 @@ class TaskScreen extends StatelessWidget {
                   ),
                 ),
                 Text(
-                    '12 Tasks',
+                    Provider.of<TaskData>(context).taskCount().toString() +' tasks',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18.0
@@ -50,30 +59,7 @@ class TaskScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              child: ListView(
-                children: <Widget>[
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                         'First',
-                          style: TextStyle(
-                            fontSize: 30.0
-                          ),
-                      ),
-                      SizedBox(
-                        width: 60.0,
-                      ),
-                      Checkbox(
-                        onChanged: (val,){
-
-                        },
-                        tristate: true,
-                      )
-                    ],
-                  ),
-                ],
-              ),
+              child: TaskList(),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(topRight: Radius.circular(20.0),topLeft: Radius.circular(20.0)),
                 color: Colors.white,
