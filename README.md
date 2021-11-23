@@ -1,2 +1,2 @@
 # Apps
-A List of in Android (Java) apps made by me.
+Android (Java) and Flutter apps made by me.
